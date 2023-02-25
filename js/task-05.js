@@ -1,9 +1,8 @@
-const inputEl = document.querySelector('#name-input' );
-const spanEl = document.querySelector('#name-output' );
+const inputEl = document.querySelector('#name-input');
+const spanEl = document.querySelector('#name-output');
 
-inputEl.addEventListener('input', newInput);
 
-const newInput = (event) => {
+const newInput = event => {
     
     spanEl.textContent = event.currentTarget.value;
 
@@ -12,3 +11,4 @@ const newInput = (event) => {
     }
 }
 
+inputEl.addEventListener('input', newInput);
