@@ -14,19 +14,26 @@ function getRandomHexColor() {
              let width = 30;
              let height = 30;
 
-                   btnCreate.addEventListener('click', event => { 
+
+                 btnCreate.addEventListener('click', event => {
+                 createBoxes(inputNumEl.value);
+              });
+            
+
+              const onButtonCreate = () => {
                      const newNumber = Number(inputNumEl.value);
                      if (newNumber < inputNumEl.min || newNumber > inputNumEl.max) {
                       inputNumEl.value = '';
                       return alert(
                         `Enter a number in the range ${inputNumEl.min} to ${inputNumEl.max}`,
                       );
-                   });
+                   };}
+
                   
                    btnDestroy.addEventListener('click', event => {
   
                      const divsElBoxes = boxesEl.querySelectorAll('div');
-                     divsElBoxes.forEach(a => a.remove());
+                     divsElBoxes.forEach(input => inputNumEl.remove());
                    });
 
                    const createBoxes = amount => {
@@ -49,4 +56,5 @@ function getRandomHexColor() {
                      );
                    };
 
-            
+                   btnCreate.addEventListener('click', onButtonCreate);
+                
