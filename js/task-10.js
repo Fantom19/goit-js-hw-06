@@ -33,7 +33,7 @@ function getRandomHexColor() {
                    btnDestroy.addEventListener('click', event => {
   
                      const divsElBoxes = boxesEl.querySelectorAll('div');
-                     divsElBoxes.forEach(input => inputNumEl.remove());
+                     divsElBoxes.forEach(a => a.remove());
                    });
 
                    const createBoxes = amount => {
